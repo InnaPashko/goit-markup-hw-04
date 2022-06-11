@@ -128,20 +128,24 @@ align-items: center;
     margin-right: 0;
 }
 
-.nav:hover, 
-.nav:focus {
+.contact-icon{
+    margin-right: 10px;
+}
+
+/* .nav-mail:hover, 
+.nav-mail:focus {
 fill: #2196F3;
 }
 .contact:hover, 
 .contact:focus {
-    fill: #2196F3;}
+    fill: #2196F3;} */
 
 /* .header-link:hover,
 .heder-link:focus {
 color: #2196F3;   
 } */
 
-.header-mail, .header-tel {
+.contact-link {
 font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
@@ -149,26 +153,25 @@ color: #757575;
 display: block;
 padding-top: 32px;
 padding-bottom: 32px;
+display: flex;
+align-items: center;
 }
 
-/* .header-mail::before {
-    content: url(../images/mail.png);
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-    } */
 
-    /* .header-tel::before {
-        content: url(../images/tel.jpg);
-        width: 16px;
-        height: 12px;
-        margin-right: 10px;
-         } */
-
-.header-mail:hover, .header-tel:hover,
-.heder-mail:focus, .header-tel:focus {
+.contact-link:hover, 
+.contact-link:focus  {
     color: #2196F3;   
 }
+
+.contact-link:hover .contact-icon, 
+.contact-link:focus .contact-icon {
+    fill: #2196F3;   
+}
+
+/* .contact-item:hover,
+.contact-item:focus {
+    color: #2196F3;   
+} */
 
 .hero {
 background-color: #2F303A;
@@ -229,6 +232,24 @@ margin: auto;
     display: flex;
 }
 
+.svg-specifics{
+    display: block;
+    align-items: center;
+    background: #F5F4FA;
+    border-radius: 4px;
+    width: 270px;
+    height: 120px;
+    display: flex;
+margin-left: auto;
+align-items: center;
+justify-content: center;
+margin-bottom: 30px;
+}
+
+.svg-specifics-icon{
+    background-position: 50% 50%;
+}
+
 .specifics-text {
 display: none;
 font-weight: 700;
@@ -243,25 +264,7 @@ margin-right: 30px;
 width: 270px;
 }
 
-/* .specifics-link::before{
-    content: "";
-    height: 120px;
-    background-color: #F5F4FA;
-    outline: 1px solid tomato;
-    display: block;
-    background-size: contain;
-    background-position: center;
-    background-color: #FFFFFF;
-    background-repeat: no-repeat;
-    padding-right: 100px;
-    padding-top: 25px; */
-    
-    
 
-    /* .specifics-link:nth-child(1)::before{
-        background-image: url(../images/antenna\ 1.png);
-        
-    } */
 
 .specifics-link:last-child{
 margin-right: 0;
@@ -355,6 +358,12 @@ margin-bottom: 16px;
     width: 44px;
     height: 44px;
     margin-right: 10px;
+    background-color: #FFFFFF;;
+display: flex;
+border-radius: 50%;
+align-items: center;
+justify-content: center;
+fill: #AFB1B8;
 }
 
 .team-soc-item:last-child{
@@ -374,21 +383,24 @@ fill: #AFB1B8;
 .team-soc-link:hover, 
 .team-soc-link:focus {
 background-color: #2196F3;
-fill: #FFFFFF;
 }
-/* .team-soc-link:hover .team-soc-icon,
+
+.team-soc-link:hover .team-soc-icon,
  .team-soc-link:focus .team-soc-icon {
-    background-color: #2196F3;
     fill: #FFFFFF;
-} */
+}
 
 /* .team-soc-icon{
     fill: #AFB1B8;
 } */
+.team-soc-icon{
+align-items: center;
+justify-content: center;
+fill: #757575;}
 
-.team-soc-icon:hover, .team-soc-icon:focus {
+/* .team-soc-icon:hover, .team-soc-icon:focus {
 fill: #FFFFFF;
-}
+} */
 .clients {
     display: flex;
     margin-top: 94px;
@@ -425,16 +437,16 @@ color: #212121;
     margin-left: 0;
 }
 .clients-icon{
-    background: #E5E5E5;
+    fill: #AFB1B8;
     }
 
 .clients-item:hover,
 .clients-item:focus{
     border-color: #2196F3;; 
 }
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
-    color: #2196F3;;
+.clients-item:hover .clients-icon,
+.clients-item:focus .clients-icon {
+    fill: #2196F3;
 }
 
 .footer {
@@ -513,7 +525,7 @@ color: #FFFFFF;
     height: 100%;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
+    fill: #FFFFFF;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
 }
@@ -522,9 +534,9 @@ color: #FFFFFF;
 }
 .join-link:hover,
 .join-link:focus {
-   background-color: #2196F3;
-
-
+   background-color: #2196F3;}
+  
+  
 .portfolio-page {
 display: none;
 }
@@ -560,9 +572,7 @@ flex-wrap: wrap;
     margin-right: 0;
  }
 
- /* .writings-list:nth-last-child(-1+1){
-    margin-bottom: 0;
- } */
+
 
  .writings-list:nth-child(n+7) {
     margin-bottom: 0;
